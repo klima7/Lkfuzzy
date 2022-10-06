@@ -15,6 +15,10 @@ class InputVariable:
     def __setitem__(self, key, value):
         self._functions[key] = value
 
+    @property
+    def name(self):
+        return self._name
+
     def is_within_range(self, crisp_value):
         return self._range[0] <= crisp_value <= self._range[1]
 

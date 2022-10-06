@@ -9,6 +9,12 @@ class Node(ABC):
     def evaluate(self, inputs):
         pass
 
+    def __and__(self, other):
+        return AndNode(self, other)
+
+    def __or__(self, other):
+        return OrNode(self, other)
+
 
 class OrNode(Node):
 
