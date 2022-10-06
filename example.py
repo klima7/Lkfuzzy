@@ -17,5 +17,5 @@ rules = [
 ]
 
 system = FuzzySystem(rules)
-tip = system.compute(food=10, service=20)
+tip = system.compute(food=7, service=7)
 print(f"Tip should be {tip}%")
