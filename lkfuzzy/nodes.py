@@ -16,7 +16,6 @@ class OrNode(Node):
         self._left = left
         self._right = right
 
-    @abstractmethod
     def evaluate(self, inputs):
         left_result = self._left.evaluate(inputs)
         right_result = self._right.evaluate(inputs)
@@ -29,7 +28,6 @@ class AndNode(Node):
         self._left = left
         self._right = right
 
-    @abstractmethod
     def evaluate(self, inputs):
         left_result = self._left.evaluate(inputs)
         right_result = self._right.evaluate(inputs)
@@ -42,7 +40,6 @@ class VariableNode(Node):
         self._var = var
         self._mf = mf
 
-    @abstractmethod
     def evaluate(self, inputs):
         crisp_value = self._get_crisp_value(inputs)
         fuzzy_value = self._mf.fuzzify(crisp_value)

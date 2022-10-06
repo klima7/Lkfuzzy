@@ -13,7 +13,7 @@ class InputVariable:
         return VariableNode(self, mf)
 
     def __setitem__(self, key, value):
-        self._functions['key'] = value
+        self._functions[key] = value
 
     def is_within_range(self, crisp_value):
         return self._range[0] <= crisp_value <= self._range[1]
